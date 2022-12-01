@@ -8,15 +8,14 @@ import (
 )
 
 func main() {
-	file, err := os.Open("input.txt")
+	file, err := os.Open("../input.txt")
 	if err != nil {
 		panic(err)
 	}
 
-	fmt.Println(getHighestCalories(file))
-
 	defer file.Close()
 
+	fmt.Println(getHighestCalories(file))
 }
 
 func getHighestCalories(caloriesList *os.File) int {
