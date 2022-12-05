@@ -37,11 +37,10 @@ func getSumPriorities(file *os.File) int {
 func getLetterInCommon(firstString, secondString string) string {
 	letterInCommon := ""
 
-	for firstIdx := range firstString {
-		for secondIdx := range secondString {
-			if firstString[firstIdx] == secondString[secondIdx] {
-				letterInCommon = string(firstString[firstIdx])
-			}
+	for _, char := range firstString {
+		if strings.Contains(secondString, string(char)) {
+			letterInCommon = string(char)
+			break
 		}
 	}
 	return letterInCommon
