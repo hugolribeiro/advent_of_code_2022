@@ -37,15 +37,6 @@ func getTotalAssignmentPairs(inputFile *os.File) int {
 		secondAssignedFirstNumber, _ := strconv.Atoi(secondAssignedSections[0])
 		secondAssignedSecondNumber, _ := strconv.Atoi(secondAssignedSections[1])
 
-		// 6-8   2-4
-		// 2-4   6-8
-		// 7-9   5-7
-		// 5-7   7-9
-		// 2-8,3-7
-		// 3-7  2-8
-
-		// 17-26 8-14
-
 		if firstAssignedFirstNumber <= secondAssignedSecondNumber && firstAssignedSecondNumber >= secondAssignedFirstNumber {
 			totalAssignmentPairs += 1
 			continue
